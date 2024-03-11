@@ -1,0 +1,50 @@
+.header {
+  background: var(--honeydue);
+  font-family: Cormorant;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.navbar-logo {
+  width: 6rem;
+  margin-left: 2%;
+}
+.navbar-toggler {
+  border: none !important;
+  box-shadow: 0 !important;
+}
+.nav-link,
+.nav-item {
+  align-self: center;
+}
+.offcanvas-body {
+  background: var(--honeydue);
+}
+/* Extra small devices (phones, 576px and down) */
+@media only screen and (max-width: 576px) {
+  .navbar-logo-md,
+  .navbar-logo-link-md {
+    display: none !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 576px and up)  */
+@media only screen and (min-width: 576px) {
+  .navbar-logo,
+  .navbar-brand,
+  .navbar-logo-link-md {
+    display: none;
+  }
+  .navbar-logo-md {
+    display: block;
+    width: 8rem;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+  .navbar-expand-md .offcanvas .offcanvas-body {
+    justify-content: center;
+  }
+  .navbar-expand-md .navbar-nav {
+    flex-grow: 0.5;
+  }
+}
