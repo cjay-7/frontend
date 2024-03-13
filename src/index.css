@@ -17,6 +17,7 @@ h4,
 h5,
 h6 {
   font-family: Cormorant;
+  color: var(--black) !important;
 }
 
 :root {
@@ -25,6 +26,7 @@ h6 {
    */
   --honeydue: #d3dfd5;
   --porcelain: #fffefc;
+  --porcelain-alt: ##fffef9;
   --rf-blue: #02384c;
   --black: #292827;
   --logo: #4c473d;
@@ -36,35 +38,48 @@ h6 {
 
 a {
   text-decoration: none;
+  color: var(--black);
 }
-
+ul {
+  padding-inline-start: 0;
+  padding-left: 0 !important;
+}
 li {
   list-style: none;
+  font-family: Garamond;
+}
+p {
+  font-family: Garamond;
+}
+hr {
+  border-top: 1px dashed var(--black) !important;
+  width: 60%;
+  margin: 0.5rem auto !important;
 }
 input {
   display: block;
   width: 100%;
-  font: inherit;
+  font-family: Garamond;
 }
 
 input::-webkit-input-placeholder {
-  font: inherit;
+  font-family: Garamond;
 }
 
 input::-moz-placeholder {
-  font: inherit;
+  font-family: Garamond;
 }
 
 input:-ms-input-placeholder {
-  font: inherit;
+  font-family: Garamond;
 }
 
 input::-ms-input-placeholder {
-  font: inherit;
+  font-family: Garamond;
 }
 
 input::placeholder {
-  font: inherit;
+  font-family: Garamond;
 }
 body {
   background: var(--porcelain);

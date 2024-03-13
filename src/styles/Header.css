@@ -3,6 +3,7 @@
   font-family: Cormorant;
   font-weight: bold;
   font-size: 1.2rem;
+  color: var(--logo) !important;
 }
 .navbar-logo {
   width: 6rem;
@@ -18,6 +19,9 @@
 }
 .offcanvas-body {
   background: var(--honeydue);
+}
+.dropdown-item a {
+  text-decoration: none;
 }
 /* Extra small devices (phones, 576px and down) */
 @media only screen and (max-width: 576px) {

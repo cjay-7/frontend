@@ -1,0 +1,24 @@
+/*Our Story*/
+
+/*Our Management*/
+.our-management-container {
+  background-color: var(--porcelain-alt);
+}
+
+/*Our Why Ruia*/
+.why-ruia .row .col h4 {
+  text-decoration: underline 1px var(--black);
+}
+.why-ruia .row {
+  gap: 3rem;
+}
+/*Export Locations*/
+.export-locations {
+  background-color: var(--porcelain-alt);
+}
+.export-locations .row .col {
+  text-align: center;
+}
+.export-locations .row .col img {
+  width: 4rem;
+}

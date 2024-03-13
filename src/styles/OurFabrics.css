@@ -1,0 +1,12 @@
+.Our-fabrics-top .row .col {
+  margin: 1rem;
+}
+.Our-fabrics-top .row .col p {
+  margin-top: 0.5rem;
+}
+.Our-fabrics-top .row .col img {
+  width: 6rem;
+}
+.Our-fabrics-top .row .col img.bci {
+  width: 8rem;
+}

@@ -3,12 +3,12 @@ import {
   Nav,
   Navbar,
   NavDropdown,
-  NavLink,
   Offcanvas,
 } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import Logo from "../../logo.svg";
-import "../../styles/HeaderStyles.css";
+import "../../styles/Header.css";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Navigationbar = () => {
   return (
@@ -77,17 +77,20 @@ const Navigationbar = () => {
     <>
       {["md"].map((expand) => (
         <Navbar
+          sticky="top"
           key={expand}
           expand={expand}
           className="header"
         >
           <Container fluid>
-            <img
-              className="navbar-logo"
-              src={Logo}
-              alt="logo "
-            />
-            <Navbar.Brand href="#">Ruia Fabrics</Navbar.Brand>
+            <Link to="/">
+              <img
+                className="navbar-logo"
+                src={Logo}
+                alt="logo "
+              />
+            </Link>
+            <Navbar.Brand href="/">Ruia Fabrics</Navbar.Brand>
 
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -101,37 +104,53 @@ const Navigationbar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-around  pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
+                  <Nav.Link href="/">Home</Nav.Link>
 
                   <NavDropdown
                     title="About Us"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#action3">
-                      <div>
+                    <NavDropdown.Item>
+                      <HashLink
+                        smooth
+                        to="/AboutUs#OurStory"
+                      >
                         <h5>Our Story</h5>
-                      </div>
-                      <ul>
-                        <li></li>
-                      </ul>
+                      </HashLink>
                     </NavDropdown.Item>
 
-                    <NavDropdown.Item href="#action4">
-                      <div>
-                        <h5>Export Locations</h5>
-                      </div>
-                      <ul>
-                        <li></li>
-                      </ul>
+                    <NavDropdown.Item href="/AboutUs#OurManagement">
+                      <HashLink
+                        smooth
+                        to="/AboutUs#OurManagement"
+                      >
+                        <h5>Our Management</h5>
+                      </HashLink>
                     </NavDropdown.Item>
-                    <NavDropdown.Divider />
+                    <NavDropdown.Item>
+                      <HashLink
+                        smooth
+                        to="/AboutUs#WhyRuia"
+                      >
+                        <h5>Why Ruia</h5>
+                      </HashLink>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item>
+                      <HashLink
+                        smooth
+                        to="/AboutUs#ExportLocations"
+                      >
+                        <h5>Export Locations</h5>
+                      </HashLink>
+                    </NavDropdown.Item>
+                    {/* <NavDropdown.Divider />
 
                     <NavDropdown.Item href="#action5">
                       Something else here
-                    </NavDropdown.Item>
+                    </NavDropdown.Item> */}
                   </NavDropdown>
                   <Nav.Link
-                    href="#action0"
+                    href="/"
                     className="navbar-logo-link-md"
                   >
                     <img
@@ -140,8 +159,8 @@ const Navigationbar = () => {
                       className="navbar-logo-md"
                     />
                   </Nav.Link>
-                  <Nav.Link href="#action3">Our Fabrics</Nav.Link>
-                  <Nav.Link href="#action4">Contact Us</Nav.Link>
+                  <Nav.Link href="/OurFabrics">Our Fabrics</Nav.Link>
+                  <Nav.Link href="/contactus">Contact Us</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

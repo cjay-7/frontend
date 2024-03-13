@@ -1,12 +1,26 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomeScreen from "./screens/HomeScreen";
+
+/*Common Components*/
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
+
+/*Screens*/
+import HomeScreen from "./screens/HomeScreen";
+import ContactUsScreen from "./screens/ContactUsScreen";
+import AboutUsScreen from "./screens/AboutUsScreen";
+import OurFabricsScreen from "./screens/OurFabricsScreen";
+
+/*FontAwesome*/
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons";
-library.add(fab, faCheckSquare, faCoffee);
+import {
+  faPhone,
+  faEnvelope,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(fab, faPhone, faEnvelope, faLocationDot);
+
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +31,18 @@ function App() {
             <Route
               path="/"
               element={<HomeScreen />}
+            />
+            <Route
+              path="/AboutUs"
+              element={<AboutUsScreen />}
+            />
+            <Route
+              path="/OurFabrics"
+              element={<OurFabricsScreen />}
+            />
+            <Route
+              path="/ContactUs"
+              element={<ContactUsScreen />}
             />
           </Routes>
         </main>

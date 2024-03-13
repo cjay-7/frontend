@@ -1,12 +1,13 @@
 import React from "react";
-import Logo from "../../logo.svg";
+import Logo from "../../logo-white.svg";
 import { Link } from "react-router-dom";
-import "../../styles/FooterStyles.css";
+import "../../styles/Footer.css";
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { HashLink } from "react-router-hash-link";
 
 export default function Footer() {
   return (
@@ -14,21 +15,24 @@ export default function Footer() {
       <Col className="footer">
         <Row>
           <Col>
-            <h3 className="footer-header">
-              Solving the climate emergency starts today
-            </h3>
+            <h3 className="footer-header">Where Quality Meets Creativity</h3>
           </Col>
           <Col>
             <Row className="ButtonRow justify-content-end align-items-end mt-2">
               <Col sm="auto">
-                <Button className="footerBtn">Contact Sales</Button>
+                <Button
+                  variant="light"
+                  className="footerBtn"
+                >
+                  Contact Sales
+                </Button>
               </Col>
               <Col sm="auto">
                 <Button
                   className="footerBtnWhite"
                   variant="outline-light"
                 >
-                  Explore Projects
+                  Explore Fabrics
                 </Button>
               </Col>
             </Row>
@@ -39,46 +43,113 @@ export default function Footer() {
           <Col>
             <img
               src={Logo}
-              width="64px"
-              alt="alphabet greens logo"
+              alt="Ruia White"
             ></img>
           </Col>
           <Col>
-            <h5>Services</h5>
+            <h5>Home</h5>
             <ul>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-            </ul>
-          </Col>
-          <Col>
-            <h5>Services</h5>
-            <ul>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-            </ul>
-          </Col>
-          <Col>
-            <h5>Services</h5>
-            <ul>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
+              <li>
+                <HashLink
+                  smooth
+                  to="/Home#Hero"
+                >
+                  Hero
+                </HashLink>
+              </li>
+              <li>
+                <HashLink
+                  smooth
+                  to="/Home#WhoAreWe"
+                >
+                  Who are we
+                </HashLink>
+              </li>
+              <li>
+                <HashLink
+                  smooth
+                  to="/Home#Usp"
+                >
+                  Usp
+                </HashLink>
+              </li>
+              <li>
+                <HashLink
+                  smooth
+                  to="/Home#HomeFabrics"
+                >
+                  Our Fabrics
+                </HashLink>
+              </li>
             </ul>
           </Col>
           <Col>
             <h5>About</h5>
             <ul>
-              <li>About Us</li>
-              <li>Manifesto</li>
-              <li>FAQ</li>
-              <li>Contact Us</li>
+              <li>
+                <HashLink
+                  smooth
+                  to="/AboutUs#OurStory"
+                >
+                  Our Story
+                </HashLink>
+              </li>
+              <li>
+                <HashLink
+                  smooth
+                  to="/AboutUs#OurManagement"
+                >
+                  Our Management
+                </HashLink>
+              </li>
+              <li>
+                <HashLink
+                  smooth
+                  to="/AboutUs#WhyRuia"
+                >
+                  Why Ruia
+                </HashLink>
+              </li>
+              <li>
+                <HashLink
+                  smooth
+                  to="/AboutUs#ExportLocations"
+                >
+                  Export Locations
+                </HashLink>
+              </li>
             </ul>
           </Col>
+          <Col>
+            <h5>Our Fabrics</h5>
+            <ul>
+              <li>
+                <HashLink
+                  smooth
+                  to="/OurFabrics#OurFabrics"
+                >
+                  Our Fabrics
+                </HashLink>
+              </li>
+              <li>
+                <HashLink
+                  smooth
+                  to="/OurFabrics#AllFabrics"
+                >
+                  All Fabrics
+                </HashLink>
+              </li>
+            </ul>
+          </Col>
+          <Col>
+            <Link
+              to="/ContactUs"
+              className="text-decoration-none"
+            >
+              <h5>Contact Us</h5>
+            </Link>
+          </Col>
+
           <Col>
             <h5>Socials</h5>
             <Row className="footer-socials ">
@@ -123,7 +194,7 @@ export default function Footer() {
         </Row>
         <hr className="footer-hr mb-4" />
         <Row className="footer-bottom justify-content-between">
-          <Col lg={4}>© Copyright 2023</Col>
+          <Col lg={4}>© Copyright 2024</Col>
           <Col lg={5}>
             <Row className="justify-content-end">
               <Col lg={3}>
