@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row, Image } from "react-bootstrap";
+import { motion } from "framer-motion";
 
 import FabricManufacturers from "../../../assets/images/ourFabrics/industry_4896988.png";
 import Fabric from "../../../assets/images/ourFabrics/textile_9170887.png";
@@ -8,9 +9,12 @@ import Bci from "../../../assets/images/ourFabrics/Better-Cotton-900x0.png";
 
 const OurFabricsTop = () => {
   return (
-    <div
+    <motion.div
       className="Our-fabrics-top m-5"
       id="OurFabrics"
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1 }}
     >
       <h1>Our Fabrics</h1>
       <Row className="text-center">
@@ -49,7 +53,7 @@ const OurFabricsTop = () => {
           </p>
         </Col>
       </Row>
-    </div>
+    </motion.div>
   );
 };
 export default OurFabricsTop;

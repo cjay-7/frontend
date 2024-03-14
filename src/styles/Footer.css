@@ -22,6 +22,10 @@
   line-height: 18px;
   color: #faf8f6;
 }
+.footerBtn a {
+  text-decoration: none;
+  color: var(--black);
+}
 .footerBtnWhite {
   height: 48px;
   padding: 10px 24px;
@@ -31,12 +35,17 @@
   font-size: 16px;
   line-height: 18px;
   margin-right: 40px;
+  text-decoration: none;
 }
 .footerBtn:hover {
   background-color: var(--primaryButtonColorHover);
   border-color: var(--primaryButtonColorHover);
   /* background-color: #fefefe; */
   transition: 1s;
+}
+.footerBtnWhite a {
+  text-decoration: none;
+  color: var(--porcelain);
 }
 .footer-hr {
   border-top: 1px dashed #fefefe !important;

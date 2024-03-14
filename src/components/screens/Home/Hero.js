@@ -26,9 +26,7 @@ const Hero = () => {
           <div className="hero-slide">
             <h1>Where Quality Meets Creativity</h1>
             <div className="h2-container opacity-5">
-              <h2>
-                We meticulously craft each meter of <span>fabric</span>,
-              </h2>
+              <h2>We meticulously craft each meter of fabric,</h2>
               <h2>from creation and weaving to dyeing and finishing.</h2>
               <h2>
                 Our process is designed to awaken the most distinguished
@@ -59,9 +57,7 @@ const Hero = () => {
           <div className="hero-slide">
             <h1>Where Quality Meets Creativity</h1>
             <div className="h2-container">
-              <h2>
-                We meticulously craft each meter of <span>fabric</span>,
-              </h2>
+              <h2>We meticulously craft each meter of fabric,</h2>
               <h2 className="opacity-5">
                 from creation and weaving to dyeing and finishing.
               </h2>
@@ -94,9 +90,7 @@ const Hero = () => {
           <div className="hero-slide">
             <h1>Where Quality Meets Creativity</h1>
             <div className="h2-container">
-              <h2>
-                We meticulously craft each meter of <span>fabric</span>,
-              </h2>
+              <h2>We meticulously craft each meter of fabric,</h2>
               <h2>from creation and weaving to dyeing and finishing. </h2>
               <h2 className="opacity-5">
                 Our process is designed to awaken the most distinguished
@@ -127,13 +121,11 @@ const Hero = () => {
           <div className="hero-slide">
             <h1>Where Quality Meets Creativity</h1>
             <div className="h2-container">
-              <h2>
-                We meticulously craft each meter of <span>fabric</span>,
-              </h2>
+              <h2>We meticulously craft each meter of fabric,</h2>
               <h2>from creation and weaving to dyeing and finishing. </h2>
               <h2>
                 Our process is designed to awaken the most distinguished{" "}
-                <span>qualities</span>,
+                qualities,
               </h2>
               <h2 className="opacity-5">
                 Catering to the discerning needs of textile editors and
@@ -160,17 +152,15 @@ const Hero = () => {
           <div className="hero-slide">
             <h1>Where Quality Meets Creativity</h1>
             <div className="h2-container">
-              <h2>
-                We meticulously craft each meter of <span>fabric</span>,
-              </h2>
+              <h2>We meticulously craft each meter of fabric,</h2>
               <h2>from creation and weaving to dyeing and finishing. </h2>
               <h2>
                 Our process is designed to awaken the most distinguished{" "}
-                <span>qualities</span>,
+                qualities,
               </h2>
               <h2>
-                <span>Catering</span> to the discerning needs of textile editors
-                and wholesalers both nationally and internationally
+                Catering to the discerning needs of textile editors and
+                wholesalers both nationally and internationally
               </h2>
             </div>
             <div className="opacity-0 brands-container">
@@ -193,17 +183,15 @@ const Hero = () => {
           <div className="hero-slide">
             <h1>Where Quality Meets Creativity</h1>
             <div className="h2-container">
-              <h2>
-                We meticulously craft each meter of <span>fabric</span>,
-              </h2>
+              <h2>We meticulously craft each meter of fabric,</h2>
               <h2>from creation and weaving to dyeing and finishing. </h2>
               <h2>
                 Our process is designed to awaken the most distinguished{" "}
-                <span>qualities</span>,
+                qualities,
               </h2>
               <h2>
-                <span>Catering</span> to the discerning needs of textile editors
-                and wholesalers both nationally and internationally
+                Catering to the discerning needs of textile editors and
+                wholesalers both nationally and internationally
               </h2>
             </div>
             <Container>

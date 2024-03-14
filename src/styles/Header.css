@@ -5,6 +5,9 @@
   font-size: 1.2rem;
   color: var(--logo) !important;
 }
+.header-inner-container {
+  width: 100%;
+}
 .navbar-logo {
   width: 6rem;
   margin-left: 2%;
@@ -40,7 +43,7 @@
   }
   .navbar-logo-md {
     display: block;
-    width: 8rem;
+    transition: width 1s smooth;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */

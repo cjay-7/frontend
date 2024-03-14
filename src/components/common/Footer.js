@@ -24,7 +24,7 @@ export default function Footer() {
                   variant="light"
                   className="footerBtn"
                 >
-                  Contact Sales
+                  <Link to="/ContactUs">Contact Sales</Link>
                 </Button>
               </Col>
               <Col sm="auto">
@@ -32,7 +32,7 @@ export default function Footer() {
                   className="footerBtnWhite"
                   variant="outline-light"
                 >
-                  Explore Fabrics
+                  <Link to="/OurFabrics">Explore Fabrics</Link>
                 </Button>
               </Col>
             </Row>
@@ -107,7 +107,7 @@ export default function Footer() {
                   smooth
                   to="/AboutUs#WhyRuia"
                 >
-                  Why Ruia
+                  Why Ruia Fabrics
                 </HashLink>
               </li>
               <li>

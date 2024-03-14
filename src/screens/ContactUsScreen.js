@@ -4,31 +4,44 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function ContactUsScreen() {
   return (
-    <section class="form-section">
-      <div class="contactus-container flex">
-        <div class="info-container flex">
-          <h2>Contact Us!</h2>
-          <div class="info">
+    <section className="form-section">
+      <div className="contactus-container flex">
+        <div className="info-container flex">
+          <h2>Contact Us</h2>
+          <div className="info">
             <div>
               <FontAwesomeIcon icon="fa-solid fa-phone" />
-              <a href="tel:+91 "> Phone </a>
+              <a href="tel:+91 7021418483"> +91 7021418483 </a>
             </div>
             <div>
               <FontAwesomeIcon icon="fa-solid fa-envelope" />
               <a
-                href="mailto:"
+                href="mailto:admin@ruiafabrics.com"
                 target="_blank"
                 rel="noreferrer"
               >
-                E mail
+                admin@ruiafabrics.com
               </a>
             </div>
             <div>
+              <FontAwesomeIcon icon="fa-solid fa-envelope" />
+              <a
+                href="mailto:pan@ruiafabrics.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                pankaj@ruiafabrics.com
+              </a>
+            </div>
+            <div className="flex align-items-center">
               <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-              <span>Address</span>
+              <p>
+                187A-2, Shah & Nahar Ind. Estate, Lower Parel, Mumbai-400013,
+                India
+              </p>
             </div>
           </div>
-          <div class="socials">
+          <div className="socials">
             <FontAwesomeIcon
               className="BannerBtnIcon"
               icon="fa-brands fa-facebook"
@@ -47,17 +60,14 @@ export default function ContactUsScreen() {
             />
           </div>
         </div>
-        <div class="form-container">
-          <h2>
-            Let's get in touch!
-            <FontAwesomeIcon icon="fa-solid fa-arrow-trend-up"></FontAwesomeIcon>
-          </h2>
+        <div className="form-container">
+          <h2>Let's get in touch!</h2>
           <form
             id="contact"
             action=""
           >
-            <div class="group">
-              <label for="fname">Full Name</label>
+            <div className="group">
+              <label htmlFor="fname">Full Name</label>
               <input
                 type="text"
                 name="fname"
@@ -66,8 +76,8 @@ export default function ContactUsScreen() {
                 required
               />
             </div>
-            <div class="group">
-              <label for="lname">Fabric</label>
+            <div className="group">
+              <label htmlFor="lname">Fabric</label>
               <input
                 type="text"
                 name="fabrics"
@@ -76,8 +86,8 @@ export default function ContactUsScreen() {
                 required
               />
             </div>
-            <div class="group">
-              <label for="email">Email</label>
+            <div className="group">
+              <label htmlFor="email">Email</label>
               <input
                 type="email"
                 name="email"
@@ -86,8 +96,8 @@ export default function ContactUsScreen() {
                 required
               />
             </div>
-            <div class="group">
-              <label for="phone">Phone</label>
+            <div className="group">
+              <label htmlFor="phone">Phone</label>
               <input
                 type="tel"
                 id="phone"
@@ -99,7 +109,7 @@ export default function ContactUsScreen() {
 
             <input
               type="submit"
-              class="btn"
+              className="btn"
               id="submit"
             />
           </form>

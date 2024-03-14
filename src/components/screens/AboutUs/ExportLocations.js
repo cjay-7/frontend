@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../../../styles/AboutUs.css";
 import { Col, Image, Row } from "react-bootstrap";
 import Europe from "../../../assets/images/locations/europe1.png";
 import Asia from "../../../assets/images/locations/asia.png";
 import America from "../../../assets/images/locations/america.png";
 import India from "../../../assets/images/locations/india.png";
+import { motion, useScroll } from "framer-motion";
 
 const ExportLocations = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", ".7 1"],
+  });
   return (
-    <div
+    <motion.div
       className="export-locations m-5"
       id="ExportLocations"
+      ref={ref}
+      style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress,
+      }}
     >
       <h2>Export Locations</h2>
       <h3>
@@ -39,7 +50,7 @@ const ExportLocations = () => {
         </Col>
       </Row>
       <hr></hr>
-    </div>
+    </motion.div>
   );
 };
 export default ExportLocations;

@@ -65,10 +65,10 @@
 /* Usp.css */
 .usp-container {
   background-color: var(--honeydue);
+  overflow-x: hidden;
   /* max-height: 48rem; */
 }
 .usp-header-container {
-  /* margin: 0 12rem !important; */
 }
 .usp-rf-blue {
   background-color: var(--rf-blue);
@@ -124,12 +124,14 @@
   transform: translate(1rem, 0px);
 }
 .rack {
-  height: 14rem;
+  height: 13rem;
   transform: translate(3rem, 1rem);
+  overflow-x: hidden;
 }
 .fabric-rack {
-  height: 14rem;
+  height: 13rem;
   transform: translate(4rem, 1rem);
+  overflow-x: hidden;
 }
 .usp-imgs {
   align-items: flex-end !important;

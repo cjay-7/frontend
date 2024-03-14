@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Card, Container, CardGroup } from "react-bootstrap";
 
 import Linen from "../../../assets/images/fabrics/linen";
@@ -10,12 +10,23 @@ import Velvet from "../../../assets/images/fabrics/velvet";
 import Viscose from "../../../assets/images/fabrics/viscose";
 import Bci from "../../../assets/images/fabrics/bci.avif";
 import { Link } from "react-router-dom";
+import { motion, useScroll } from "framer-motion";
 
 export default function HomeFabrics() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", ".7 1"],
+  });
   return (
-    <div
+    <motion.div
       className="home-fabrics"
       id="HomeFabrics"
+      ref={ref}
+      style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress,
+      }}
     >
       <h2>Our Fabrics</h2>
       <CardGroup>
@@ -112,6 +123,6 @@ export default function HomeFabrics() {
         </Card>
       </CardGroup>
       <hr></hr>
-    </div>
+    </motion.div>
   );
 }

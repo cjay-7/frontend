@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Col, Row } from "react-bootstrap";
 import "../../../styles/AboutUs.css";
+import { motion, useScroll } from "framer-motion";
 
 const WhyRuia = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1 1"],
+  });
   return (
-    <div
+    <motion.div
       className="why-ruia m-5"
       id="WhyRuia"
+      ref={ref}
+      style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress,
+      }}
     >
       <h2>Why Ruia Fabrics</h2>
       <h3>Unparalleled quality, durability and sustainability</h3>
@@ -59,7 +70,7 @@ const WhyRuia = () => {
         </Col>
       </Row>
       <hr></hr>
-    </div>
+    </motion.div>
   );
 };
 export default WhyRuia;

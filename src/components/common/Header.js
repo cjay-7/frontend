@@ -9,8 +9,18 @@ import Logo from "../../logo.svg";
 import "../../styles/Header.css";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Navigationbar = () => {
+  const { scrollY } = useScroll();
+
+  const width = useTransform(scrollY, [0, 200], ["8rem", "4rem"]);
+  // const background = useTransform(
+  //   scrollY,
+  //   [0, 1],
+  //   ["var(--honeydue)", "rgb(0,0,0,0.7)"]
+  // );
+
   return (
     // <Navbar
     //   collapseOnSelect
@@ -80,9 +90,13 @@ const Navigationbar = () => {
           sticky="top"
           key={expand}
           expand={expand}
-          className="header"
+          className="header p-0"
         >
-          <Container fluid>
+          <div
+            className="header-inner-container"
+            // style={{ background }}
+            // transition={{ duration: 2, type: "inertia" }}
+          >
             <Link to="/">
               <img
                 className="navbar-logo"
@@ -153,10 +167,12 @@ const Navigationbar = () => {
                     href="/"
                     className="navbar-logo-link-md"
                   >
-                    <img
+                    <motion.img
                       src={Logo}
                       alt="logo "
                       className="navbar-logo-md"
+                      style={{ width }}
+                      transition={{ duration: 2, type: "inertia" }}
                     />
                   </Nav.Link>
                   <Nav.Link href="/OurFabrics">Our Fabrics</Nav.Link>
@@ -164,7 +180,7 @@ const Navigationbar = () => {
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
-          </Container>
+          </div>
         </Navbar>
       ))}
     </>
