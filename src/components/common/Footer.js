@@ -13,13 +13,19 @@ export default function Footer() {
   return (
     <Container fluid>
       <Col className="footer">
-        <Row>
-          <Col>
+        <Row className="align-items-center">
+          <Col
+            sm={12}
+            md={6}
+          >
             <h3 className="footer-header">Where Quality Meets Creativity</h3>
           </Col>
-          <Col>
-            <Row className="ButtonRow justify-content-end align-items-end mt-2">
-              <Col sm="auto">
+          <Col
+            sm={12}
+            md={6}
+          >
+            <Row className="ButtonRow justify-content-end align-items-end ">
+              <Col>
                 <Button
                   variant="light"
                   className="footerBtn"
@@ -27,7 +33,7 @@ export default function Footer() {
                   <Link to="/ContactUs">Contact Sales</Link>
                 </Button>
               </Col>
-              <Col sm="auto">
+              <Col>
                 <Button
                   className="footerBtnWhite"
                   variant="outline-light"
@@ -52,31 +58,31 @@ export default function Footer() {
               <li>
                 <HashLink
                   smooth
-                  to="/Home#Hero"
+                  to="/#Hero"
                 >
-                  Hero
+                  Home
                 </HashLink>
               </li>
               <li>
                 <HashLink
                   smooth
-                  to="/Home#WhoAreWe"
+                  to="/#WhoAreWe"
                 >
-                  Who are we
+                  Who We Are
                 </HashLink>
               </li>
               <li>
                 <HashLink
                   smooth
-                  to="/Home#Usp"
+                  to="/#Usp"
                 >
-                  Usp
+                  Our USP
                 </HashLink>
               </li>
               <li>
                 <HashLink
                   smooth
-                  to="/Home#HomeFabrics"
+                  to="/#HomeFabrics"
                 >
                   Our Fabrics
                 </HashLink>
@@ -150,7 +156,7 @@ export default function Footer() {
             </Link>
           </Col>
 
-          <Col>
+          <Col className="socials-col">
             <h5>Socials</h5>
             <Row className="footer-socials ">
               <Col>

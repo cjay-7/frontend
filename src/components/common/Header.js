@@ -85,15 +85,15 @@ const Navigationbar = () => {
     //   </Navbar.Collapse>
     // </Navbar>
     <>
-      {["md"].map((expand) => (
+      {["sm"].map((expand) => (
         <Navbar
           sticky="top"
           key={expand}
           expand={expand}
-          className="header p-0"
+          className="header"
         >
           <div
-            className="header-inner-container"
+            className="container-fluid"
             // style={{ background }}
             // transition={{ duration: 2, type: "inertia" }}
           >
@@ -117,7 +117,7 @@ const Navigationbar = () => {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-around  pe-3">
+                <Nav className="justify-content-around">
                   <Nav.Link href="/">Home</Nav.Link>
 
                   <NavDropdown
@@ -176,7 +176,7 @@ const Navigationbar = () => {
                     />
                   </Nav.Link>
                   <Nav.Link href="/OurFabrics">Our Fabrics</Nav.Link>
-                  <Nav.Link href="/contactus">Contact Us</Nav.Link>
+                  <Nav.Link href="/ContactUs">Contact Us</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

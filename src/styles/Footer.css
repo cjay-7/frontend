@@ -51,6 +51,9 @@
   border-top: 1px dashed #fefefe !important;
   width: 100% !important;
 }
+.ButtonRow {
+  margin-top: 1rem;
+}
 .footer-sitemap {
   margin-right: 2%;
   gap: 1rem;
@@ -91,4 +94,33 @@
 .footer-bottom > * a {
   color: #faf8f6;
   font-size: 0.75rem;
+}
+
+/* Extra small devices (phones, 576px and down) */
+@media only screen and (max-width: 576px) {
+  .footerBtnWhite {
+    margin: 0;
+  }
+  .footer-header,
+  .ButtonRow {
+    padding: 0 5%;
+  }
+  .footer-sitemap .col {
+    display: none;
+  }
+  .socials-col {
+    margin: 0px 2rem;
+  }
+  .socials-col,
+  .footer-socials .col {
+    display: block !important;
+  }
+
+  .ButtonRow {
+    margin: 0;
+    gap: 20px;
+  }
+  .footer-bottom {
+    text-align: center;
+  }
 }

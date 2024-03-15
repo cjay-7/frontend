@@ -68,8 +68,8 @@
   overflow-x: hidden;
   /* max-height: 48rem; */
 }
-.usp-header-container {
-}
+/* .usp-header-container {
+} */
 .usp-rf-blue {
   background-color: var(--rf-blue);
   color: var(--porcelain);
@@ -123,43 +123,7 @@
 .service-list {
   transform: translate(1rem, 0px);
 }
-.rack {
-  height: 13rem;
-  transform: translate(3rem, 1rem);
-  overflow-x: hidden;
-}
-.fabric-rack {
-  height: 13rem;
-  transform: translate(4rem, 1rem);
-  overflow-x: hidden;
-}
-.usp-imgs {
-  align-items: flex-end !important;
-}
-.machine {
-  height: 17rem;
-  transform: translate(10% -10%);
-}
-.printer {
-  height: 11rem;
-  margin: 10% -7.5%;
-}
-.dashboard {
-  height: 11rem;
-  margin-bottom: 15%;
-}
-.desk {
-  /* translate: 0 -25%; */
-  transform: translate(0, -25%);
-}
-.fabric-rolls {
-  width: 8rem;
-  /* translate: 1rem 8rem; */
-  transform: translate(1rem, 7rem);
-}
-.khadi {
-  transform: translate(-7.5%, -2.5%) scale(1.1);
-}
+
 .usp-container hr {
   padding: 5px;
 }
@@ -206,4 +170,103 @@
 */
 .card:hover {
   transform: translate(0, -0.3rem);
+}
+/* Extra small devices (phones, 576px and down) */
+@media only screen and (max-width: 576px) {
+  .h2-container {
+    width: 100%;
+  }
+  .premium-brands {
+    gap: 0;
+  }
+  .usp-header {
+    margin-left: 0%;
+  }
+  .usp-rf-blue {
+    padding: 10%;
+  }
+  .usp-rf-blue .row {
+    align-items: center;
+  }
+  .usp-header-logo {
+    display: none;
+  }
+  .team-container {
+    margin: 10%;
+  }
+  .usp-text {
+    text-align: center;
+  }
+  .years {
+    margin-bottom: 1.25rem;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .rack {
+    height: 13rem;
+    transform: translate(3rem, 1rem);
+    overflow-x: hidden;
+  }
+  .fabric-rack {
+    height: 13rem;
+    transform: translate(4rem, 1rem);
+    overflow-x: hidden;
+  }
+  .usp-imgs {
+    align-items: flex-end !important;
+  }
+  .machine {
+    height: 17rem;
+    transform: translate(10% -10%);
+  }
+  .printer {
+    height: 11rem;
+    margin: 10% -7.5%;
+  }
+  .dashboard {
+    height: 11rem;
+    margin-bottom: 15%;
+  }
+  .desk {
+    /* translate: 0 -25%; */
+    transform: translate(0, -25%);
+  }
+  .fabric-rolls {
+    width: 8rem;
+    /* translate: 1rem 8rem; */
+    transform: translate(1rem, 7rem);
+  }
+  .khadi {
+    transform: translate(-7.5%, -2.5%) scale(1.1);
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  /* For portrait layouts only */
+  .h2-container {
+    width: 65%;
+  }
+  .premium-brands {
+    gap: 0;
+  }
+  .years-container,
+  .fabric-production-container {
+    padding: 3% 0 !important;
+  }
+  .machine {
+    height: 12rem;
+    transform: translate(10% -10%);
+  }
+  .printer {
+    height: 8rem;
+    margin: 10% -7.5%;
+  }
+  .dashboard {
+    height: 8rem;
+    margin-bottom: 15%;
+  }
+  .fabric-rolls {
+    width: 4rem;
+    transform: translate(0, 3rem);
+  }
 }

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "../../../styles/HomeScreen.css"; // Import the CSS file for styling
-import { Col, Container, Row, Image } from "react-bootstrap";
+import { Col, Row, Image } from "react-bootstrap";
 import Logo from "../../../logo-white.svg";
 import Team from "../../../assets/images/usp/team.png";
 import Rack from "../../../assets/images/usp/rack.svg";
@@ -12,14 +12,29 @@ import Desk from "../../../assets/images/usp/desk.svg";
 import FabricRolls from "../../../assets/images/usp/fabric-rolls.svg";
 import Khadi from "../../../assets/images/usp/khadi.svg";
 import { MotionConfig, motion, useScroll, useTransform } from "framer-motion";
+import Counter from "../../common/Counter";
+
+const useScrollOptions = (ref, windowSize) => {
+  if (windowSize[0] > 576) {
+    return {
+      target: ref,
+      offset: ["0 1", "1.33 1"],
+    };
+  } else {
+    return {
+      target: ref,
+      offset: ["0 1", ".3 1"],
+    };
+  }
+};
 
 const Usp = () => {
-  const ref = useRef(null);
   const ref1 = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1 1"],
-  });
+
+  const ref = useRef(null);
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  const scrollOptions = useScrollOptions(ref, windowSize.current);
+  const { scrollYProgress } = useScroll(scrollOptions);
 
   // const width = useTransform(scrollYProgress, [0, 200], ["8rem", "4rem"]);
   return (
@@ -34,7 +49,10 @@ const Usp = () => {
           className="usp-header-container"
           id="WhoAreWe"
         >
-          <Col xs={8}>
+          <Col
+            xs={12}
+            md={8}
+          >
             <motion.div
               className="usp-rf-blue "
               ref={ref}
@@ -46,13 +64,13 @@ const Usp = () => {
             >
               <Row>
                 <Col className="usp-header ">
-                  <h2>Who Are We</h2>
+                  <h2>Who We Are</h2>
                   <p>
                     Ruia Fabrics, based in Surat has three decades of quality
                     expertise fueling consistent excellence.
                   </p>
                 </Col>
-                <Col>
+                <Col className="usp-header-logo">
                   <Image src={Logo}></Image>
                 </Col>
               </Row>
@@ -91,15 +109,28 @@ const Usp = () => {
             }}
           >
             <Col
-              xs={3}
+              xs={6}
+              md={3}
               className="years-container"
             >
               <div className="usp-text years">
-                <h3>34+ Years</h3>
+                <h3>
+                  <Counter
+                    from={0}
+                    to={34}
+                  />
+                  + Years
+                </h3>
                 <p>of Trust & Expertise</p>
               </div>
               <div className="usp-text years">
-                <h3>28000 sqft</h3>
+                <h3>
+                  <Counter
+                    from={10000}
+                    to={28000}
+                  />{" "}
+                  sqft
+                </h3>
                 <p>Production Capacity</p>
               </div>
             </Col>
@@ -117,14 +148,27 @@ const Usp = () => {
             </Col>
             <Col
               className="fabric-production-container"
-              xs={4}
+              xs={6}
+              md={3}
             >
               <div className="usp-text fabric-production">
-                <h3>300000 mtrs</h3>
+                <h3>
+                  <Counter
+                    from={10000}
+                    to={300000}
+                  />{" "}
+                  meters
+                </h3>
                 <p>of Fabric Production per month</p>
               </div>
               <div className="usp-text fabric-trading">
-                <h3>700000 mtrs</h3>
+                <h3>
+                  <Counter
+                    from={10000}
+                    to={700000}
+                  />{" "}
+                  meters
+                </h3>
                 <p>of Fabric Trading per month</p>
               </div>
             </Col>
@@ -158,7 +202,7 @@ const Usp = () => {
             </Col>
           </motion.div>
           <motion.div
-            className="row"
+            className="row align-items-center"
             ref={ref1}
             style={{
               scale: scrollYProgress,
@@ -166,7 +210,11 @@ const Usp = () => {
               transformOrigin: "left",
             }}
           >
-            <Col className="time-container">
+            <Col
+              xs={12}
+              md={3}
+              className="time-container"
+            >
               <div className=" usp-text time">
                 <h3>On Time</h3>
                 <p>Delivery with Value Added Services</p>
@@ -190,7 +238,10 @@ const Usp = () => {
                 src={Khadi}
               ></Image>
             </Col>
-            <Col>
+            <Col
+              xs={12}
+              md={3}
+            >
               <div className="usp-text service-list p-0">
                 <h3>In-House</h3>
                 <p className="m-1">Sample Developement</p>

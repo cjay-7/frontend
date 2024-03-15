@@ -22,3 +22,9 @@
 .export-locations .row .col img {
   width: 4rem;
 }
+/* Extra small devices (phones, 576px and down) */
+@media only screen and (max-width: 576px) {
+  .why-ruia .row {
+    gap: 0;
+  }
+}

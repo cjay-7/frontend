@@ -7,12 +7,24 @@ import America from "../../../assets/images/locations/america.png";
 import India from "../../../assets/images/locations/india.png";
 import { motion, useScroll } from "framer-motion";
 
+const useScrollOptions = (ref, windowSize) => {
+  if (windowSize[0] > 576) {
+    return {
+      target: ref,
+      offset: ["0 1", "1.33 1"],
+    };
+  } else {
+    return {
+      target: ref,
+      offset: ["0 1", ".33 1"],
+    };
+  }
+};
 const ExportLocations = () => {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", ".7 1"],
-  });
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  const scrollOptions = useScrollOptions(ref, windowSize.current);
+  const { scrollYProgress } = useScroll(scrollOptions);
   return (
     <motion.div
       className="export-locations m-5"

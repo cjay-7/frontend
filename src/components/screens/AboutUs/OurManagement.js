@@ -3,12 +3,25 @@ import { Col, Row } from "react-bootstrap";
 import "../../../styles/AboutUs.css";
 import { motion, useScroll } from "framer-motion";
 
+const useScrollOptions = (ref, windowSize) => {
+  if (windowSize[0] > 576) {
+    return {
+      target: ref,
+      offset: ["0 1", "1.33 1"],
+    };
+  } else {
+    return {
+      target: ref,
+      offset: ["0 1", ".33 1"],
+    };
+  }
+};
+
 const OurManagement = () => {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1 1"],
-  });
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  const scrollOptions = useScrollOptions(ref, windowSize.current);
+  const { scrollYProgress } = useScroll(scrollOptions);
   return (
     <motion.div
       className="our-management-container m-5"
@@ -20,8 +33,19 @@ const OurManagement = () => {
     >
       <h2>Our Management</h2>
       <Row>
-        <Col>
-          <h4>Pankaj Ruia</h4>
+        <Col
+          xs={12}
+          md={6}
+        >
+          <motion.h4
+            ref={ref}
+            style={{
+              scale: scrollYProgress,
+              opacity: scrollYProgress,
+            }}
+          >
+            Pankaj Ruia
+          </motion.h4>
           <motion.h5
             ref={ref}
             style={{
@@ -50,11 +74,14 @@ const OurManagement = () => {
             mindset, which has been key to his sustained success.
           </motion.p>
         </Col>
-        <Col></Col>
+        <Col
+          xs={12}
+          md={6}
+        ></Col>
       </Row>
       <Row>
         <motion.div
-          className="col"
+          className="col-12 col-md-6"
           ref={ref}
           style={{
             scale: scrollYProgress,

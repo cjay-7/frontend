@@ -14,10 +14,5 @@ export default function Counter({ from, to }) {
     return () => controls.stop();
   }, [from, to]);
 
-  return (
-    <h3
-      ref={number}
-      style={{ display: "inline-flex" }}
-    />
-  );
+  return <span ref={number} />;
 }

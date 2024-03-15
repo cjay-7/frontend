@@ -11,7 +11,10 @@ const OurStory = () => {
       <h1 className="text-center">About Ruia Fabrics Pvt. Ltd</h1>
       <h2 className="text-left">Our Story</h2>
       <Row className="mt-4">
-        <Col>
+        <Col
+          xs={12}
+          md={6}
+        >
           <motion.p
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -27,7 +30,10 @@ const OurStory = () => {
             quality, and diverse design range.
           </motion.p>
         </Col>
-        <Col>
+        <Col
+          xs={12}
+          md={6}
+        >
           <motion.p
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -45,7 +51,10 @@ const OurStory = () => {
         </Col>
       </Row>
       <Row className="mt-2">
-        <Col>
+        <Col
+          xs={12}
+          md={6}
+        >
           <motion.p
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -61,7 +70,10 @@ const OurStory = () => {
             distribution network spanning India and the Middle East.
           </motion.p>
         </Col>
-        <Col>
+        <Col
+          xs={12}
+          md={6}
+        >
           <motion.p
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
