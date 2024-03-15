@@ -29,8 +29,8 @@
   .header {
     padding: 2%;
   }
-  .navbar-logo-md,
-  .navbar-logo-link-md {
+  .navbar-logo-sm,
+  .navbar-logo-link-sm {
     display: none !important;
   }
 }
@@ -42,10 +42,10 @@
   }
   .navbar-logo,
   .navbar-brand,
-  .navbar-logo-link-md {
+  .navbar-logo-link-sm {
     display: none;
   }
-  .navbar-logo-md {
+  .navbar-logo-sm {
     display: block;
     transition: width 1s smooth;
   }
@@ -54,11 +54,14 @@
   }
   /* Medium devices (landscape tablets, 768px and up) */
   @media (min-width: 768px) {
-    .navbar-expand-md .offcanvas .offcanvas-body {
+    .navbar-expand-sm .offcanvas .offcanvas-body {
       justify-content: center;
     }
-    .navbar-expand-md .navbar-nav {
+    .navbar-expand-sm .navbar-nav {
       flex-grow: 0.5;
+    }
+    .navbar-expand-sm .navbar-nav {
+      gap: 2rem;
     }
   }
 }
