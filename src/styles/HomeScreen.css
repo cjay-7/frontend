@@ -65,11 +65,10 @@
 /* Usp.css */
 .usp-container {
   background-color: var(--honeydue);
-  overflow-x: hidden;
-  /* max-height: 48rem; */
 }
-/* .usp-header-container {
-} */
+.usp-header-container {
+  width: 100%;
+}
 .usp-rf-blue {
   background-color: var(--rf-blue);
   color: var(--porcelain);
