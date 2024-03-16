@@ -24,10 +24,10 @@ library.add(fab, faPhone, faEnvelope, faLocationDot);
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <Header />
-        <main>
-          <Routes>
+      <Routes>
+        <div>
+          <Header />
+          <main>
             <Route
               path="/"
               element={<HomeScreen />}
@@ -44,10 +44,10 @@ function App() {
               path="/ContactUs"
               element={<ContactUsScreen />}
             />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+          </main>
+          <Footer />
+        </div>
+      </Routes>
     </BrowserRouter>
   );
 }
