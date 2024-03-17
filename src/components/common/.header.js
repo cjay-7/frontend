@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import {
+  Container,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Offcanvas,
+} from "react-bootstrap";
 import Logo from "../../logo.svg";
 import "../../styles/Header.css";
 import { Link } from "react-router-dom";
@@ -25,18 +31,13 @@ const Navigationbar = () => {
       <Container fluid>
         <Link
           to="/"
-          className="navbar-brand-logo"
+          className="navbar-brand"
         >
           <img
             src={Logo}
             className="navbar-logo"
             alt="logo"
           />
-        </Link>
-        <Link
-          className="navbar-brand"
-          to="/"
-        >
           Ruia Fabrics
         </Link>
         <Navbar.Toggle
@@ -75,14 +76,15 @@ const Navigationbar = () => {
                   Our Management
                 </HashLink>
               </NavDropdown.Item>
-
-              <HashLink
-                smooth
-                to="/AboutUs#WhyRuia"
-                onClick={handleClose}
-              >
-                Why Ruia
-              </HashLink>
+              <NavDropdown.Item>
+                <HashLink
+                  smooth
+                  to="/AboutUs#WhyRuia"
+                  onClick={handleClose}
+                >
+                  Why Ruia
+                </HashLink>
+              </NavDropdown.Item>
               <NavDropdown.Item>
                 <HashLink
                   smooth
@@ -93,19 +95,6 @@ const Navigationbar = () => {
                 </HashLink>
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link>
-              <Link
-                to="/"
-                className="navbar-brand-logo-md"
-              >
-                <motion.img
-                  src={Logo}
-                  className="navbar-logo-md"
-                  alt="logo"
-                  style={{ width }}
-                />
-              </Link>
-            </Nav.Link>
             <Nav.Link
               as={Link}
               to="/OurFabrics"
