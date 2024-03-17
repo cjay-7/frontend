@@ -27,24 +27,22 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <div>
-            <Route
-              path="/"
-              element={<HomeScreen />}
-            />
-            <Route
-              path="/AboutUs"
-              element={<AboutUsScreen />}
-            />
-            <Route
-              path="/OurFabrics"
-              element={<OurFabricsScreen />}
-            />
-            <Route
-              path="/ContactUs"
-              element={<ContactUsScreen />}
-            />
-          </div>
+          <Route
+            path="/"
+            element={<HomeScreen />}
+          />
+          <Route
+            path="/AboutUs"
+            element={<AboutUsScreen />}
+          />
+          <Route
+            path="/OurFabrics"
+            element={<OurFabricsScreen />}
+          />
+          <Route
+            path="/ContactUs"
+            element={<ContactUsScreen />}
+          />
         </Routes>
       </main>
       <Footer />
